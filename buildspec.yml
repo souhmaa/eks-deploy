@@ -17,6 +17,8 @@ phases:
        - "mkdir ~/.kube/"
        - "cp config-$ENV ~/.kube/config"
   build:
+    commands:
+       - "echo nothing to build"
   post_build:
     commands:
        - "echo hello_world"
