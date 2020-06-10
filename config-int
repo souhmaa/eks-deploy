@@ -20,6 +20,8 @@ users:
       apiVersion: client.authentication.k8s.io/v1alpha1
       command: aws-iam-authenticator
       args:
-      - "token"
-      - "-i"
-      - ci-cluster
+        - "token"
+        - "-i"
+        - ci-cluster
+        - "-r"
+        - arn:aws:iam::745904859815:user/s.maalaoui-ext
