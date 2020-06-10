@@ -20,10 +20,6 @@ users:
       apiVersion: client.authentication.k8s.io/v1alpha1
       command: aws-iam-authenticator
       args:
-      - --region
-      - eu-west-1
-      - eks
-      - get-token
-      - --cluster-name
+      - "token"
+      - "-i"
       - ci-cluster
-      command: aws
