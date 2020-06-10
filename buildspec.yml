@@ -7,9 +7,9 @@ phases:
       - echo test
 build:
     commands:
-      - curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.16.0/bin/linux/amd64/kubectl
-      - chmod +x ./kubectl
-      - export PATH=$PWD/:$PATH
-      - apt-get -y install jq
-      - aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --role-arn arn:aws:iam::44755xxxxxxx:role/EksCodeBuildkubectlRole
-      - kubectl get nodes
+      - "curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.16.0/bin/linux/amd64/kubectl"
+      - "chmod +x ./kubectl"
+      - "export PATH=$PWD/:$PATH"
+      - "apt-get -y install jq"
+      - "aws eks update-kubeconfig --name $EKS_CLUSTER_NAME --role-arn arn:aws:iam::44755xxxxxxx:role/EksCodeBuildkubectlRole"
+      - "kubectl get nodes"
