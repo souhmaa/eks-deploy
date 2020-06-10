@@ -31,6 +31,10 @@ spec:
               value: "selenium-hub"
             - name: HUB_PORT
               value: "4444"
+            - name: NODE_MAX_INSTANCES
+              value: 3
+            - name: NODE_MAX_SESSION
+              value: 3
           resources:
             limits:
               memory: "1000Mi"
