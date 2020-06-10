@@ -24,4 +24,4 @@ users:
         - "-i"
         - ci-cluster
         - "-r"
-        - arn:aws:iam::745904859815:user/s.maalaoui-ext
+        - arn:aws:iam::745904859815:role/EksCodeBuildkubectlRole
