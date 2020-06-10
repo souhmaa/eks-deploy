@@ -1,0 +1,28 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01EWXhNREE0TVRBek1Gb1hEVE13TURZd09EQTRNVEF6TUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTXVBClBzVGdXRGcxWHVtbjBoT3ZrTDhRMFY5Vi93cjNMZHd2aHByZm1vQkhIRUtYZEYyT1Z1K3pYdzFNOHIrVlZtck0KbmdNVFVrYzBRc1N6TExSY0dZWHF0L001eUJpZnYrSFg1RTZKKzk0eEsxbEZlUWNCbTVCSWhvdE55a2hYVlpMVApJS1hieG5jVi9xdDR4R2JZVWYyMGJwaFY5bFcxSXYxNld1V0dQV2ZnUDR6U2FaNUZlY3BWYmU5RWdEenVXdmRFCkV0Ni9LNmZCcFczQTFWUndpOS9JMEpscjRTKzZxMFpoUEhNSXY1czlVTUs0czRYU3pBOWhIalVnbnhoMkpkYnMKYk0vdHN3aXpjR29KTmorbkxjN1JnNEZ2RXZJa3N4NDVyWDV0bHQ2c2llcDk0TFFmQ0R3MjUzVVZ1RC8yMWFWVwpPcEJXekdwaGN2aFFoZ1JBakUwQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFIeDI5dFdXOWNwSFVLZGlBUXc5Ni91SERwRTcKTFc2MVBIY3hzb0JyVTIwTFBiU3hwT1RSTlV6SHUrWmZPTG1ONE9uNHF2aktaVldRd3Y3YjRMYU5FQUpqYitSbAptUk9xcXJHQldwOGNJRldSeGs5dlhHVk03bTMyaE1Sd21EN2FqNitzL2FDV3NMaHFmZGpyUFlKbi9zQnorRm9rCllqYy8xRVpDUVV1QmZzN2NEQ1hQY1VyaWtYN3pFVW9Wa1RmME9FdG85bjh6QTFWWlJIbVRhUmJTYXZBOEhLaXcKNURRNHM2TjJuRFp1RVpFT1pySUtoS2s0SFpKQnZEVmNJTDNrSnlibEFQZmVvYWhFS3pacDArWFI5bUxVZlVjaQpvU0Q0T25LekNSdVBQdm9vVTRBNExxakFZMVFjYm1IdTVUcHRyMlpUNC9uMVZydTJKWmo5Nzc3VWlVdz0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+    server: https://F3C276B2CB14D34EBEB562F2B976F7A8.sk1.eu-west-1.eks.amazonaws.com
+    proxy-url: http://fr000-proxy001:8080
+  name: arn:aws:eks:eu-west-1:745904859815:cluster/ci-cluster
+contexts:
+- context:
+    cluster: arn:aws:eks:eu-west-1:745904859815:cluster/ci-cluster
+    user: arn:aws:eks:eu-west-1:745904859815:cluster/ci-cluster
+  name: arn:aws:eks:eu-west-1:745904859815:cluster/ci-cluster
+current-context: arn:aws:eks:eu-west-1:745904859815:cluster/ci-cluster
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:eu-west-1:745904859815:cluster/ci-cluster
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1alpha1
+      args:
+      - --region
+      - eu-west-1
+      - eks
+      - get-token
+      - --cluster-name
+      - ci-cluster
+      command: aws
