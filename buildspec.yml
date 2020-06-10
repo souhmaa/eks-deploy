@@ -15,8 +15,8 @@ phases:
        - mv ./linux-amd64/helm /usr/local/bin/helm
   pre_build:
     commands:
-       - "mkdir ~/.kube/"
-       - "cp config-$ENV ~/.kube/config"
+       #- "mkdir ~/.kube/"
+       #- "cp config-$ENV ~/.kube/config"
   build:
     commands:
        - "echo nothing to build"
