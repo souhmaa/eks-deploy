@@ -23,4 +23,5 @@ phases:
   post_build:
     commands:
        - "echo hello_world"
+       - "kubectl apply -f manifests/selenium-hub.yaml"
   
