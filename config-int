@@ -23,5 +23,3 @@ users:
         - "token"
         - "-i"
         - ci-cluster
-        - "-r"
-        - arn:aws:iam::745904859815:role/EksCodeBuildkubectlRole
