@@ -17,4 +17,4 @@ phases:
        - "kubectl apply -f manifests/selenium-hub.yaml"
        - "kubectl apply -f manifests/selenium-node-firefox.yaml"
        - "kubectl apply -f manifests/selenium-node-chrome.yaml"
-  
+
