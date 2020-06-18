@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: selenium-node-chrome
+  name: selenium-node-chrome-debug
   labels:
-    app: selenium-node-chrome
+    app: selenium-node-chrome-debug
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: selenium-node-chrome
+      app: selenium-node-chrome-debug
   template:
     metadata:
       labels:
-        app: selenium-node-chrome
+        app: selenium-node-chrome-debug
     spec:
       volumes:
         - name: dshm
           emptyDir:
             medium: Memory
       containers:
-        - name: selenium-node-chrome
-          image: selenium/node-chrome:3.141
+        - name: selenium-node-chrome-debug
+          image: selenium/node-chrome-debug:3.141
           ports:
             - containerPort: 5555
           volumeMounts:
