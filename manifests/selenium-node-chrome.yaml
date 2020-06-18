@@ -5,7 +5,7 @@ metadata:
   labels:
     app: selenium-node-chrome
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: selenium-node-chrome
@@ -20,7 +20,7 @@ spec:
             medium: Memory
       containers:
         - name: selenium-node-chrome
-          image: selenium/node-chrome-debug:3.141
+          image: selenium/standalone-chrome
           ports:
             - containerPort: 5555
           volumeMounts:
