@@ -1,28 +1,28 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: selenium-node-chrome-debug
+  name: selenium-node-firefox
   labels:
-    app: selenium-node-chrome-debug
+    app: selenium-node-firefox
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
-      app: selenium-node-chrome-debug
+      app: selenium-node-firefox
   template:
     metadata:
       labels:
-        app: selenium-node-chrome-debug
+        app: selenium-node-firefox
     spec:
       volumes:
         - name: dshm
           emptyDir:
             medium: Memory
       containers:
-        - name: selenium-node-chrome-debug
-          image: selenium/node-chrome-debug:3.141
+        - name: selenium-node-firefox
+          image: selenium/node-firefox:3.141
           ports:
-            - containerPort: 5555
+            - containerPort: 5900
           volumeMounts:
             - mountPath: /dev/shm
               name: dshm
@@ -32,9 +32,9 @@ spec:
             - name: HUB_PORT
               value: "4444"
             - name: NODE_MAX_INSTANCES
-              value: "4"
+              value: "2"
             - name: NODE_MAX_SESSION
-              value: "4"
+              value: "2"
           resources:
             limits:
               memory: "1000Mi"

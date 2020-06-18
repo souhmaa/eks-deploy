@@ -15,7 +15,7 @@ phases:
        - "aws eks update-kubeconfig --name ci-cluster --role-arn arn:aws:iam::745904859815:role/EksCodeBuildkubectlRole"
        - "kubectl get nodes"
        - "kubectl apply -f manifests/selenium-hub.yaml"
-       - "kubectl apply -f manifests/selenium-node-firefox-debug.yaml"
-       # - "kubectl apply -f manifests/selenium-node-chrome-debug.yaml"
+       - "kubectl apply -f manifests/selenium-node-firefox.yaml"
        - "kubectl apply -f manifests/selenium-node-chrome.yaml"
+       - "kubectl apply -f manifests/selenium-node-opera.yaml"
 
