@@ -20,7 +20,7 @@ spec:
             medium: Memory
       containers:
         - name: selenium-node-chrome
-          image: selenium/node-chrome:2.53.1
+          image: selenium/node-chrome:3.141
           ports:
             - containerPort: 5555
           volumeMounts:
@@ -37,5 +37,5 @@ spec:
               value: "4"
           resources:
             limits:
-              memory: "2000Mi"
-              cpu: "3"
+              memory: "1000Mi"
+              cpu: ".5"
