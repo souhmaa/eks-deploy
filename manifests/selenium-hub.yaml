@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: selenium-hub
@@ -21,8 +21,8 @@ spec:
             - containerPort: 4444
           resources:
             limits:
-              memory: "4000Mi"
-              cpu: "3"
+              memory: "1000Mi"
+              cpu: "1"
           livenessProbe:
             httpGet:
               path: /wd/hub/status
