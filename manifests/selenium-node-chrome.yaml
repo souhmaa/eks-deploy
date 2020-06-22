@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: selenium-node-chrome
@@ -37,5 +37,5 @@ spec:
               value: "4"
           resources:
             limits:
-              memory: "1000Mi"
+              memory: "2000Mi"
               cpu: "3"
