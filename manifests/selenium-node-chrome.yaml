@@ -11,6 +11,7 @@ spec:
       app: selenium-node-chrome
   template:
     metadata:
+      namespace: selenium
       labels:
         app: selenium-node-chrome
     spec:
