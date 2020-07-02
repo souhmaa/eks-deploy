@@ -37,7 +37,7 @@ spec:
   ports:
     - port: 4444
       targetPort: 4444
-      nodePort: 80
+      nodePort: 30080
       name: port0
   selector:
     app: selenium-hub
